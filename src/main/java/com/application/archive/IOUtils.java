@@ -1,18 +1,3 @@
-/**
- *    Copyright 2013 Thomas Rausch
- *
- *    Licensed under the Apache License, Version 2.0 (the "License");
- *    you may not use this file except in compliance with the License.
- *    You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- *    Unless required by applicable law or agreed to in writing, software
- *    distributed under the License is distributed on an "AS IS" BASIS,
- *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *    See the License for the specific language governing permissions and
- *    limitations under the License.
- */
 package com.application.archive;
 
 import java.io.Closeable;
@@ -105,25 +90,20 @@ public final class IOUtils {
     }
 
     /**
-     * Makes sure that the given {@link File} is either a writable directory, or that it does not exist and a directory
+     * Makes sure that the given {@link File} is either a directory, or that it does not exist and a directory
      * can be created at its path.
      * <br>
-     * Will throw an exception if the given {@link File} is actually an existing file, or the directory is not writable
+     * Will throw an exception if the given {@link File} is actually an existing file
      * 
      * @param destination the directory which to ensure its existence for
      * @throws IOException if an I/O error occurs e.g. when attempting to create the destination directory
-     * @throws IllegalArgumentException if the destination is an existing file, or the directory is not writable
+     * @throws IllegalArgumentException if the destination is an existing file
      */
     public static void requireDirectory(File destination) throws IOException, IllegalArgumentException {
         if (destination.isFile()) {
             throw new IllegalArgumentException(destination + " exists and is a file, directory or path expected.");
         } else if (!destination.exists()) {
             destination.mkdirs();
-        }
-        if (!destination.canWrite()) {
-        
-        // if (!java.nio.file.Files.isWritable(java.nio.file.Paths.get(destination.getPath()))) {
-            throw new IllegalArgumentException("Can not write to destination " + destination);
         }
     }
 
