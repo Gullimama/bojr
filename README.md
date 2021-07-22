@@ -2,7 +2,19 @@
 
 ### BUG1
 #### How to Execute?
-...
+- Compile the application:
+```sh
+mvn compile
+```
+- Execute the extracting the **test.zip** file in the repository:
+```sh
+mvn compile exec:java -Dexec.mainClass="com.application.archive.test.ExtractArchive" -Dexec.args="test.zip /workspace/bojr/testZipExtracted"
+```
+- Open the generated testZipExtracted folder and open the **extractingReport.dat** file:
+```sh
+cd testZipExtracted
+nano extractingReport.dat
+```
 #### Symptoms
 When you execute, the "/testZipExtracted" folder is generated with the content of the "test.zip" file archive. You notice the **extractingReport.dat** file inside the "testZipExtracted" folder. This file has information about the extracted files and folders in the "test.zip" file. The file and folder names should be ordered in the file, but one item in the list does not meet this requirement and inserted in the wrong order in the list. 
 
