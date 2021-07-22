@@ -1,4 +1,8 @@
 ### INSTALLATION INSTRUCTIONS
+- Copy the provided repository folder.
+- Create your own Git repository in the Github
+- In a browser, navigate to your project’s GitHub
+- In the browser’s address bar, prefix the entire URL with gitpod.io/# and press Enter. For sample: gitpod.io/#https://github.com/gitpod-io/website
 
 ### BUG1
 #### How to Execute?
@@ -10,7 +14,7 @@ mvn compile
 ```sh
 mvn compile exec:java -Dexec.mainClass="com.application.archive.test.ExtractArchive" -Dexec.args="test.zip /workspace/bojr/testZipExtracted"
 ```
-- Open the generated testZipExtracted folder and open the **extractingReport.dat** file:
+- Go to the generated testZipExtracted folder and open the **extractingReport.dat** file:
 ```sh
 cd testZipExtracted
 nano extractingReport.dat
