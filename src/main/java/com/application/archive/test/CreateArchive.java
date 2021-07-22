@@ -9,10 +9,14 @@ import com.application.archive.ArchiverFactory;
 public class CreateArchive {
 
 	public static void main(String[] args) {
-		String archiveName = "folder5";
-		File destination = new File("c:/Users/ozget");
-		// File destination = new File("c:/testdir/folder5");
-		File source = new File("c:/testdir/folder5");
+		
+		if ( args.length != 1 ) {
+			throw new IllegalArgumentException("Needs to have 1 argument which refers to the destination folder");
+		}
+		
+		String archiveName = "test2";
+		File destination = new File( args[0] );		
+		File source = new File("sampleFolder");
 
 		Archiver archiver = ArchiverFactory.createArchiver("zip");
 		try {
