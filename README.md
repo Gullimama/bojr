@@ -19,5 +19,12 @@ However, relying on low level IO exceptions to catch bad inputs is not good prac
 ``Please implement validation code that will enable the application to throw an "IllegalArgumentException" exception instead. You will need to identify the most appropriate method/class to add your code and the fix should be OS agnostic (i.e. work the same on both Windows and Linux environments). ``
 
 ### How to debug in DevSpaces
+
+Install DevSpaces chrome extension [https://chrome.google.com/webstore/detail/devspaces-dev-environment/dmbijlfedfamdpenajngckdlehjighfi]
+Once you have installed the extension, you will notice a DevSpaces Blue button on the repo.
+
+Open the repo via this Button, it will ask you to login via Github and open a web based VS Code IDE.
+
 Go to any java file you want to debug and hover on the left of the line number and click to enable break point.
+
 Press F5 to start the debugging session.
