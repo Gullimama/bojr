@@ -23,7 +23,7 @@ nano extractingReport.dat
 When you execute, the "/testZipExtracted" folder is generated with the content of the "test.zip" file archive. You notice the **extractingReport.dat** file inside the "testZipExtracted" folder. This file has information about the extracted files and folders in the "test.zip" file. The file and folder names should be ordered in the file, but one item in the list does not meet this requirement and inserted in the wrong order in the list. 
 
 #### Expectation
-Please fix this issue and all file and folder names should be ordered properly in the "extractingReport.dat" file.
+Please fix this issue and all file and folder names should be ordered properly in the "extractingReport.dat" file. Please try to fix the existing code rather than applying new sorting code.
 
 ### BUG2
 #### How to Execute?
