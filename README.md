@@ -1,19 +1,19 @@
 ### INSTALLATION INSTRUCTIONS
+1. Copy and extract the test repository into your own GitHub repository.
+2. Install the DevSpaces Chrome browser extension (Insert link) 
+3. ...
 
-### BUG1
-#### How to Execute?
-...
-#### Symptoms
-When you execute, the "/testZipExtracted" folder is generated with the content of the "test.zip" file archive. You notice the **extractingReport.dat** file inside the "testZipExtracted" folder. This file has information about the extracted files and folders in the "test.zip" file. The file and folder names should be ordered in the file, but one item in the list does not meet this requirement and inserted in the wrong order in the list. 
+### Real Work Analysis
+1.  The **test.zip** file
 
-#### Expectation
-Please fix this issue and all file and folder names should be ordered properly in the "extractingReport.dat" file.
+The "/testZipExtracted" folder is generated from the contents of the "test.zip" file archive. Inside, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. The file and folder names should be ordered in the file, but one item in the list does not meet this requirement. 
 
-### BUG2
-#### How to Execute?
-...
-#### Symptoms
-When you execute to create archive, you hit the "java.io.IOException: Access is denied" exception. Because the current user has no *write* permission for the "output" folder to create the "sample.zip" file in the "output" folder. As the directory permissions are in the Operating System level, this is expected.
+```Please fix this issue so that all file and folder names are correctly ordered within the "extractingReport.dat" file. Do this by identifying a root cause and fixing it - rather than applying a new sorting algorithm.```
 
-#### Expectation
-we would like to check the permissions of the destination folder in earlier stage of the program execution and throw the **IllegalArgumentException** exception with a clear message rather than throwing the "java.io.IOException" in the lower layers. Please add this proper code and enable the application that will throw **IllegalArgumentException** exception in this case. Please note that the code should be put in the best ideal location(method, class) of the code repository and it should execute fine and same in both Windows and Linux environments. 
+2.  The read-only **destination** folder
+
+When creating a new archive, by attempting to write to a read-only **destination** folder (*note that you may need to create this folder with appropriate permissions in order to reproduce this issue*), you hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
+
+However, relying on low level IO exceptions to catch bad inputs is not good practice. 
+
+``Please implement validation code that will enable the application to throw an "IllegalArgumentException" exception instead. You will need to identify the most appropriate method/class to add your code and the fix should be OS agnostic (i.e. work the same on both Windows and Linux environments). ``
