@@ -12,7 +12,7 @@ The "/testZipExtracted" folder is generated from the contents of the "test.zip" 
 
 2.  The read-only **destination** folder
 
-When creating a new archive, by attempting to write to a read-only **destination** folder (*note that you may need to create this folder with appropriate permissions in order to reproduce this issue*), you hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the "destination" folder. After all, the directory permissions are declared as read only.
+When creating a new archive, by attempting to write to a read-only **destination** folder (*note that you may need to create this folder with appropriate permissions in order to reproduce this issue*), you hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
 
 However, relying on low level IO exceptions to catch bad inputs is not good practice. 
 
