@@ -10,12 +10,9 @@ public class CreateArchive {
 
 	public static void main(String[] args) {
 		
-		if ( args.length != 1 ) {
-			throw new IllegalArgumentException("Needs to have 1 argument which refers to the destination folder");
-		}
-		
+		// Hardcoded for candiate testing purposes
 		String archiveName = "test2";
-		File destination = new File( args[0] );		
+		File destination = new File("destination");		
 		File source = new File("sampleFolder");
 
 		Archiver archiver = ArchiverFactory.createArchiver("zip");
