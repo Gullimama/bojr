@@ -43,7 +43,7 @@ Identify the most appropriate method/class to add your code and the fix should w
 ```
 
 ### Debugging in DevSpaces
-DevSpaces is an online, browser based debugger that offers many of the same features and functionality you'll be familiar with in your own favorite IDE.
+DevSpaces is an online, browser based debugger that offers many of the same features and functionality you'll be familiar with in your own favorite IDE. Just one of our many great projects you could contribute to when you join.
 
 Go to any java file you want to debug, hover on the left of the line number and click to enable a break point there.
 
