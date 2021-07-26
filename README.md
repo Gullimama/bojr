@@ -11,7 +11,7 @@
 
 ```SETUP: Run the DevSpaces debugger on the CreateArchive.java file in the test folder.```
 
-The "/testZipExtracted" folder is generated from the contents of the "test.zip" file archive. Inside, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. The file and folder names should be ordered in the file, but one item in the list does not meet this requirement. 
+The "/testZipExtracted" folder is generated from the contents of the "test.zip" file archive. Inside, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
 
 ```
 Please fix this issue so that all file and folder names are correctly ordered within the "extractingReport.dat" file. 
