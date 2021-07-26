@@ -10,7 +10,7 @@ public class CreateArchive {
 
 	public static void main(String[] args) {
 		
-		// Hardcoded for candiate testing purposes
+		// Hardcoded for candidate testing purposes
 		String archiveName = "test2";
 		File destination = new File("destination");		
 		File source = new File("sampleFolder");
