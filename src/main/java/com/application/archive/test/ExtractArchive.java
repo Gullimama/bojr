@@ -11,12 +11,9 @@ public class ExtractArchive {
 
 	public static void main(String[] args) {
 		
-		if ( args.length != 2 ) {
-			throw new IllegalArgumentException("Needs to have 2 arguments. The first refers to the source zip file, the second refers to the destination folder");
-		}
-		
-		String sourceFile = args[0];
-		String destinationFolder = args[1];
+		// Hardcoded for candidate testing purposes
+		String sourceFile = "test.zip";
+		String destinationFolder = "testZipExtracted";
 		
 		File archive = new File( sourceFile );
 		File destination = new File( destinationFolder );
