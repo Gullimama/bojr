@@ -4,7 +4,7 @@
 3. Click on the DevSpaces button that appears above (*top right*) your copied repo to launch the IDE
 4. Analyze and identify the root causes of the following two issues and add your fixes to the code (*See Debugging in DevSpaces below for more*)
 5. Submit both fixes as a SINGLE pull request
-6. Add '[insert trilogy user that will be used to evaluate candidate submissions in GH]' as a collaborator and share the link to your PR as your submission response
+6. Add 'yikunchen' and 'trilogymercer' as collaborators and share the link to your PR as your submission response
 
 ### Real Work Analysis
 1.  The **test.zip** file
