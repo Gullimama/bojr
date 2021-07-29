@@ -9,7 +9,7 @@
 ### Real Work Analysis
 1.  The **test.zip** file
 
-```SETUP: Run the DevSpaces debugger on the CreateArchive.java file in the test folder.```
+```SETUP: Run the DevSpaces debugger on the ExtractArchive.java file in the test folder.```
 
 The "/testZipExtracted" folder is generated from the contents of the "test.zip" file archive. Inside, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
 
@@ -29,7 +29,7 @@ chmod 0444 destination
 
 This will create a folder called 'destination' and set the correct permissions to duplicate the issue. 
 
-Run the DevSpaces debugger on the ExtractArchive.java file in the test folder.
+Run the DevSpaces debugger on the CreateArchive.java file in the test folder.
 ```
 
 When creating a new archive, by attempting to write to a read-only **destination** folder, you'll hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
