@@ -34,12 +34,12 @@ Run the DevSpaces debugger on the CreateArchive.java file in the test folder.
 
 When creating a new archive, by attempting to write to a read-only **destination** folder, you'll hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
 
-However, relying on low level IO exceptions to catch bad inputs is not good practice. 
+However, we do not want to rely on low-level IO errors and would rather catch the problem earlier. 
 
 ```
-Please implement validation code that will enable the application to throw an "IllegalArgumentException" exception instead. 
+Please fix this by throwing an "IllegalArgumentException" exception instead. 
 
-Identify the most appropriate method/class to add your code and the fix should work the same on both Windows and Linux.
+Identify the most appropriate existing method/class to add your code (no need to create an entirely new method/class). Note: the fix should work the same on both Windows and Linux.
 ```
 
 ### Debugging in DevSpaces
