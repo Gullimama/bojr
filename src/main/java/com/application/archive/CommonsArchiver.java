@@ -87,10 +87,7 @@ class CommonsArchiver implements Archiver {
             
             extractingReport.addToFileNameList(entry.getName());
 
-            if (entry.isDirectory()) {
-                file.mkdirs();
-            } else {
-                file.getParentFile().mkdirs();
+            if (!entry.isDirectory()) {
                 IOUtils.copy(input, file);
             }
 
