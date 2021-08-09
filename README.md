@@ -14,7 +14,7 @@
 When attempting to extract the **test.zip** archive, you'll hit a "java.io.FileNotFoundException: testZipExtracted\dkl\mkds.txt" exception. All other files are succesfully extracted to their folders up to this point. 
 
 ```
-Please fix this issue so that all files and folders are correctly extracted and the extractingReport.dat file has been generated. 
+Please fix this issue so that all files and folders are correctly extracted, including those in the dkl folder, and the extractingReport.dat file has been generated. 
 
 Do this by identifying a root cause and fixing it in the existing code - rather than writing a new method/function.
 ```
