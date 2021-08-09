@@ -23,7 +23,7 @@ Do this by identifying a root cause and fixing it in the existing code - rather 
 
 ```SETUP: Run the DevSpaces debugger on the ExtractArchive.java file in the test folder.```
 
-Once this has completed execution, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
+Once this has completed execution, you'll find the **extractingReport.dat** file inside the testZipExtracted directory. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
 
 ```
 Please fix this issue so that all file and folder names are correctly ordered within the "extractingReport.dat" file. 
