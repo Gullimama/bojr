@@ -7,11 +7,23 @@
 6. Add 'yikunchen' and 'trilogymercer' as collaborators and share the link to your PR as your submission response
 
 ### Real Work Analysis
-1.  The **test.zip** file
+1. Extracting the **dkl** folder
 
 ```SETUP: Run the DevSpaces debugger on the ExtractArchive.java file in the test folder.```
 
-The "/testZipExtracted" folder is generated from the contents of the "test.zip" file archive. Inside, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
+When attempting to extract the **test.zip** archive, you'll hit a "java.io.FileNotFoundException: testZipExtracted\dkl\mkds.txt" exception. All other files are succesfully extracted to their folders up to this point. 
+
+```
+Please fix this issue so that all files and folders are correctly extracted and the extractingReport.dat file has been generated. 
+
+Do this by identifying a root cause and fixing it in the existing code - rather than writing a new method/function.
+```
+
+2.  The **test.zip** file
+
+```SETUP: Run the DevSpaces debugger on the ExtractArchive.java file in the test folder.```
+
+Once this has completed execution, you'll find the **extractingReport.dat** file. This file has information about the extracted files and folders in the "test.zip" archive. We expect the file and folder names to be ordered alphabetically, but one item in the list is not. 
 
 ```
 Please fix this issue so that all file and folder names are correctly ordered within the "extractingReport.dat" file. 
@@ -19,7 +31,7 @@ Please fix this issue so that all file and folder names are correctly ordered wi
 Do this by identifying a root cause and fixing it - rather than applying a new sorting algorithm.
 ```
 
-2.  The read-only **destination** folder
+3.  The read-only **destination** folder
 
 ```
 SETUP: Create the destination folder without write permissions using these commands in the DevSpaces terminal:
@@ -39,7 +51,7 @@ However, we do not want to rely on low-level IO errors and would rather catch th
 ```
 Please fix this by throwing an "IllegalArgumentException" exception. 
 
-Identify the most appropriate existing method/class to add your code (no need to create an entirely new method/class). Note: the fix should work the same on both Windows and Linux.
+Identify the most appropriate existing method/class to add your code (no need to create an entirely new method/class).
 ```
 
 ### Debugging in DevSpaces
