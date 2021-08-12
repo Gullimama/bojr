@@ -6,9 +6,6 @@
 
 *Hint I: The purpose of this assessment is to see how well you can identify and fix root causes in code. For each challenge, seek to identify the root cause and fix it directly. Workarounds that provide the correct output, but fail to fix the underlying issue, will be marked as zero. Once you have identified the root cause, the actual fix should be short and simple (i.e. no need to write new classes or methods).*
 
-*Hint II: While you need to submit your work as a PR in GitHub, you are free to debug on your local machine using your favorite IDE (i.e Eclipse, NetBeans, etc).*
-
-
 ### Real Work Analysis
 1. Extracting the **dkl** folder
 
