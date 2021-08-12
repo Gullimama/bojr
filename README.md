@@ -11,7 +11,7 @@
 
 ```SETUP: Run the ExtractArchive.java file in the test folder.```
 
-When attempting to extract the **test.zip** archive, you'll hit a "java.io.FileNotFoundException" exception. All files are succesfully extracted to their folders up to this point. 
+When attempting to extract the **test.zip** archive, you'll hit a "java.io.FileNotFoundException" exception. All other files are succesfully extracted to their folders up to this point. 
 
 ```
 Please fix this issue so that all files and folders can be extracted (for any combination of files & folders). 
