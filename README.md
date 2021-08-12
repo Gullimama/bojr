@@ -4,7 +4,7 @@
 3. Submit all three fixes as a SINGLE pull request
 4. Add 'yikunchen' and 'trilogymercer' as collaborators and share the link to your PR as your submission response
 
-*Hint: The purpose of this assesment is to see how well you can identify and fix root causes. For each RCA, seek to identify the underlying cause and fix it directly. Workarounds that provide the correct output, but fail to fix the underlying issue, will be marked as zero. Once you have identified the root cause, the actual fix should be short and simple (i.e. no need to write new classes or methods).
+*Hint: The purpose of this assesment is to see how well you can identify and fix root causes. For each challenge, seek to identify the root cause and fix it directly. Workarounds that provide the correct output, but fail to fix the underlying issue, will be marked as zero. Once you have identified the root cause, the actual fix should be short and simple (i.e. no need to write new classes or methods).*
 
 ### Real Work Analysis
 1. Extracting the **dkl** folder
