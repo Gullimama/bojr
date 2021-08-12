@@ -39,9 +39,9 @@ SETUP: Create the destination folder without write permissions using these comma
 mkdir destination
 chmod 0444 destination
 
-This will create a folder called 'destination' and set the correct permissions to duplicate the issue. 
+This will create a folder called 'destination' in the root folder of your cloned repo and set the correct permissions to duplicate the issue. 
 
-Run the CreateArchive.java file in the test folder.
+Run the CreateArchive.java file in the test folder (NOTE: you may have to edit CreateArchive.java to reflect the 'destination' folder you created in the previous step.)
 ```
 
 When creating a new archive, by attempting to write to a read-only **destination** folder, you'll hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
