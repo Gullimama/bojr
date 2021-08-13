@@ -34,14 +34,14 @@ Do this by identifying a root cause and fixing it - rather than applying a new s
 3.  The read-only **destination** folder
 
 ```
-SETUP: Create the destination folder without write permissions using these commands in the terminal:
+SETUP: Create a destination folder without write permissions in the BOJR root directory. For example:
 
 mkdir destination
 chmod 0444 destination
 
 This will create a folder called 'destination' in the root folder of your cloned repo and set the correct permissions to duplicate the issue. 
 
-Run the CreateArchive.java file in the test folder (NOTE: you may have to edit CreateArchive.java to reflect the 'destination' folder you created in the previous step.)
+Run the CreateArchive.java file in the test folder (NOTE: you may have to edit CreateArchive.java to reflect whichever 'destination' folder you created in the previous step.)
 ```
 
 When creating a new archive, by attempting to write to a read-only **destination** folder, you'll hit a "java.io.IOException: Permission denied" exception. This is because there are no *write* permissions for the **destination** folder.
