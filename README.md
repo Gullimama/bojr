@@ -2,7 +2,9 @@
 1. Copy the BOJR repository into your own GitHub account (*make sure your new repo is private*)
 2. Analyze and identify the root causes of the following three issues and add your fixes to the code 
 3. Submit all three fixes as a SINGLE pull request
-4. Add 'yikunchen' and 'trilogymercer' as collaborators and share the link to your PR as your submission response
+4. Add 'GAC89' as a collaborator and share the link to your PR as your submission response
+
+Although this repository is written in java, we have designed the test such that it does not require any language specific knowledge. No matter what your primary techstack is, you should be able to exercise your debugging skills and fix the root cause.
 
 *Hint: The purpose of this assessment is to see how well you can identify and fix root causes in code. For each challenge, seek to identify the root cause and fix it directly. Workarounds that provide the correct output, but fail to fix the underlying issue, will be marked as zero. Once you have identified the root cause, the actual fix should be short and simple (i.e. no need to write new classes or methods).*
 
