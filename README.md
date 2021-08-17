@@ -1,7 +1,7 @@
 ### INSTRUCTIONS FOR CANDIDATES
 1. Copy the BOJR repository into your own GitHub account (*make sure your new repo is private*)
 2. Analyze and identify the root causes of the following three issues and add your fixes to the code 
-3. Submit all three fixes as a SINGLE pull request ***in your own repo***
+3. Submit all three fixes as a SINGLE pull request ***in your own private repo***
 4. Add 'GAC89' as a collaborator and share the link to your PR as your submission response
 
 Although this repository is written in java, we have designed the test such that it does not require any language specific knowledge. No matter what your primary techstack is, you should be able to exercise your debugging skills and fix the root cause.
