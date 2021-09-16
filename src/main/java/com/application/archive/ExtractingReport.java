@@ -46,7 +46,7 @@ public class ExtractingReport {
 			String insertValue = fileNameList.get(i);
 			
 		    int j;
-		    for (j = i - 1; j > 0 && insertValue.compareTo(fileNameList.get(j)) < 0; j--) {
+		    for (j = i - 1; j >= 0 && insertValue.compareTo(fileNameList.get(j)) < 0; j--) {
 		    	fileNameList.set(j + 1, fileNameList.get(j));
 		    }	
 		    
