@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.ArchiveException;
@@ -79,19 +81,18 @@ class CommonsArchiver implements Archiver {
         ArchiveInputStream input = createArchiveInputStream(archive);
         extract(input, destination);
     }
-
+    
     private void extract(ArchiveInputStream input, File destination) throws IOException {
         ArchiveEntry entry;
         while ((entry = input.getNextEntry()) != null) {
             File file = new File(destination, entry.getName());
+            FileModeMapper.map(entry, file);
             
             extractingReport.addToFileNameList(entry.getName());
 
             if (!entry.isDirectory()) {
                 IOUtils.copy(input, file);
-            }
-
-            FileModeMapper.map(entry, file);
+            } 
         }
         extractingReport.createReportFile(destination);
     }
@@ -266,4 +267,5 @@ class CommonsArchiver implements Archiver {
 
         archive.closeArchiveEntry();
     }
+
 }

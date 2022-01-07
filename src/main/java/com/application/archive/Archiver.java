@@ -3,6 +3,8 @@ package com.application.archive;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * An Archiver facades a specific archiving library, allowing for simple archiving of files and directories, and
@@ -85,4 +87,24 @@ public interface Archiver {
      * @return a filename extension with a preceding dot
      */
     String getFilenameExtension();
+    
+    /**
+     * Ensures basic validation on source and destination file permissions. 
+     * 
+     * @param file the file to add to the archive
+     * @param entryName the name of the archive entry
+     * @param archive the archive to write to
+     * @throws IOException when an I/O error occurs during FileInputStream creation or during copying
+     */
+    default void validateInputs(File source, File destination)  throws ValidationException {
+    	if(!source.exists()) {
+			throw new ValidationException("source file not found. "); 	
+		} else if (!Files.isReadable(Paths.get(source.getAbsolutePath()))) {
+			throw new ValidationException("improper permissions on source file. "); 
+		}
+		if (destination.exists() && 
+				!Files.isWritable(Paths.get(destination.getAbsolutePath()))) {
+			throw new ValidationException("improper permissions on destination folder. "); 
+		}
+    }
 }

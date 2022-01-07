@@ -57,12 +57,11 @@ abstract class FileModeMapper {
             return new PosixPermissionMapper(entry);
         }
 
-        // TODO: implement basic windows permission mapping (e.g. with File.setX or attrib)
         return new FallbackFileModeMapper(entry);
     }
 
     /**
-     * Does nothing!
+     * Barebones implementation to create the entry as file will all permissions. 
      */
     public static class FallbackFileModeMapper extends FileModeMapper {
 
@@ -72,7 +71,16 @@ abstract class FileModeMapper {
 
         @Override
         public void map(File file) throws IOException {
-            // do nothing
+        	if (!file.exists()) {
+        		if (this.getArchiveEntry().isDirectory()) {
+        			file.mkdir(); 
+        		} else {
+        			file.createNewFile(); 
+        		}
+        	}
+        	file.setReadable(true); 
+        	file.setWritable(true); 
+        	file.setExecutable(true); 
         }
     }
 
